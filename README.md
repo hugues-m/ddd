@@ -6,4 +6,4 @@ This is a work in progress, BC breaks could happen without notice.
 
 ## License
 
-phpunit-vw is available under the MIT License.
+hmlb/ddd is available under the MIT License.
