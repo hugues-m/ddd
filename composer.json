@@ -20,13 +20,13 @@
   "require": {
     "php": ">=5.5.0",
     "beberlei/assert": "~2.3",
-    "simple-bus/message-bus": "~2.2"
+    "simple-bus/message-bus": "~2.2",
+    "ramsey/uuid": "~3.0"
   },
   "require-dev": {
     "phpunit/phpunit": "~4.0",
     "phpspec/phpspec": "~2.3",
-    "satooshi/php-coveralls": "~0.6",
-    "ramsey/uuid": "~3.0"
+    "satooshi/php-coveralls": "~0.6"
   },
   "config": {
     "bin-dir": "bin"
