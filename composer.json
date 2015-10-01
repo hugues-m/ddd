@@ -1,0 +1,47 @@
+{
+  "name": "hmlb/ddd",
+  "description": "DDD library for PHP projects.",
+  "type": "library",
+  "keywords": [
+    "hmlb",
+    "DDD",
+    "domain driven design",
+    "php"
+  ],
+  "authors": [
+    {
+      "name": "Hugues Maignol",
+      "email": "hugues@hmlb.fr",
+      "homepage": "https://www.hmlb.fr"
+    }
+  ],
+  "homepage": "https://github.com/hmlb/ddd",
+  "license": "MIT",
+  "require": {
+    "php": ">=5.5.0",
+    "beberlei/assert": "~2.3",
+    "simple-bus/message-bus": "~2.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0",
+    "phpspec/phpspec": "~2.3",
+    "satooshi/php-coveralls": "~0.6",
+    "ramsey/uuid": "~3.0"
+  },
+  "config": {
+    "bin-dir": "bin"
+  },
+  "autoload": {
+    "psr-4" : { "HMLB\\DDD\\" : "src" }
+  },
+  "autoload-dev": {
+    "psr-4" : { "HMLB\\DDD\\Tests\\" : "tests" }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+language: php
+
+php:
+  - 5.5
+  - 5.6
+  - 7.0
+  - hhvm
+  - nightly
+
+matrix:
+  allow_failures:
+    - php: 7.0
+
+script:
+  - bin/phpunit
+
+after_script:
+  - bin/coveralls
+
+before_script:
+  - composer self-update
+  - composer install -n
+
+script:
+  - bin/phpspec run -fpretty --verbose
+  - phpunit
+
+notifications:
+  email:
+    - system+travis-ci@hmlb.fr
