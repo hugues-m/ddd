@@ -2,6 +2,8 @@
 
 namespace HMLB\DDD\Message;
 
+use HMLB\DDD\Entity\Identity;
+
 /**
  * A simple implementation of a named message.
  *
@@ -11,6 +13,13 @@ namespace HMLB\DDD\Message;
  */
 class Message implements MessageInterface
 {
+    /**
+     * An Identifier can be issued by middleware for command persistance.
+     *
+     * @var Identity
+     */
+    private $id;
+
     private static $_messageName;
 
     /**
@@ -19,6 +28,14 @@ class Message implements MessageInterface
     public function __toString()
     {
         return self::messageName();
+    }
+
+    /**
+     * @return Identity
+     */
+    public function getId()
+    {
+        return $this->id;
     }
 
     /**

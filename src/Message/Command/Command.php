@@ -2,7 +2,6 @@
 
 namespace HMLB\DDD\Message\Command;
 
-use HMLB\DDD\Entity\Identity;
 use HMLB\DDD\Message\Message;
 
 /**
@@ -12,18 +11,4 @@ use HMLB\DDD\Message\Message;
  */
 class Command extends Message
 {
-    /**
-     * An Identifier can be issued by middleware for command persistance.
-     *
-     * @var Identity
-     */
-    protected $id;
-
-    /**
-     * @return Identity
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
 }
