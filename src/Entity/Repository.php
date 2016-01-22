@@ -18,7 +18,7 @@ interface Repository
      *
      * @return self
      */
-    public function add(AggregateRoot $aggregateRoot);
+    public function add(AggregateRoot $aggregateRoot): self;
 
     /**
      * @param Identity $identity
@@ -27,17 +27,17 @@ interface Repository
      *
      * @throws AggregateRootNotFoundException
      */
-    public function get(Identity $identity);
+    public function get(Identity $identity): AggregateRoot;
 
     /**
      * @return AggregateRoot[]
      */
-    public function getAll();
+    public function getAll(): array;
 
     /**
      * The fully qualified class name of the managed AggregateRoot.
      *
      * @return string
      */
-    public function getClassName();
+    public function getClassName(): string;
 }

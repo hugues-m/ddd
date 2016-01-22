@@ -14,5 +14,5 @@ interface AggregateRoot extends Entity
      *
      * @return Identity
      */
-    public function getId();
+    public function getId(): Identity;
 }

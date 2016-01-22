@@ -18,7 +18,7 @@
   "homepage": "https://github.com/hmlb/ddd",
   "license": "MIT",
   "require": {
-    "php": ">=5.5.0",
+    "php": "~7.0",
     "beberlei/assert": "~2.3",
     "simple-bus/message-bus": "~2.2",
     "ramsey/uuid": "~3.0"

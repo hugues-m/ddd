@@ -20,7 +20,7 @@ class Identity
     /**
      * @param string $value (optional) For instantiation of an existing Identity
      */
-    public function __construct($value = null)
+    public function __construct(string $value = null)
     {
         if (null === $value) {
             $this->id = $this->generateId();
@@ -37,7 +37,7 @@ class Identity
      *
      * @return string
      */
-    private function generateId()
+    private function generateId(): string
     {
         return Uuid::uuid4()->toString();
     }
@@ -45,7 +45,7 @@ class Identity
     /**
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         return $this->id;
     }

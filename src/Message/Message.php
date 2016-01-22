@@ -20,12 +20,15 @@ class Message implements MessageInterface
      */
     private $id;
 
+    /**
+     * @var string
+     */
     private static $_messageName;
 
     /**
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         return self::messageName();
     }
@@ -33,7 +36,7 @@ class Message implements MessageInterface
     /**
      * @return Identity
      */
-    public function getId()
+    public function getId(): Identity
     {
         return $this->id;
     }
@@ -45,7 +48,7 @@ class Message implements MessageInterface
      *
      * @return string
      */
-    public static function messageName()
+    public static function messageName(): string
     {
         if (null === self::$_messageName) {
             $classSlices = explode('\\', get_called_class());
