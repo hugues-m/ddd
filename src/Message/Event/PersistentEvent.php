@@ -1,0 +1,16 @@
+<?php
+
+namespace HMLB\DDD\Message\Event;
+
+use HMLB\DDD\Persistence\PersistentMessage;
+use HMLB\DDD\Persistence\PersistentMessageCapabilities;
+
+/**
+ * PersistentEvent
+ *
+ * @author Hugues Maignol <hugues.maignol@kitpages.fr>
+ */
+class PersistentEvent extends Event implements PersistentMessage
+{
+    use PersistentMessageCapabilities;
+}
