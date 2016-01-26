@@ -17,9 +17,9 @@ interface Repository
      *
      * @param AggregateRoot $aggregateRoot
      *
-     * @return self
+     * @return void
      */
-    public function add(AggregateRoot $aggregateRoot): self;
+    public function add(AggregateRoot $aggregateRoot);
 
     /**
      * @param Identity $identity
