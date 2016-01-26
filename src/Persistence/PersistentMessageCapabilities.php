@@ -4,6 +4,7 @@ namespace HMLB\DDD\Persistence;
 
 use HMLB\DDD\Entity\Identity;
 use HMLB\DDD\Exception\Exception;
+use HMLB\DDD\Exception\PersistentMessageWithoutIdentityException;
 
 /**
  * Trait PersistentMessageCapability.
@@ -24,7 +25,7 @@ trait PersistentMessageCapabilities
     public function getId(): Identity
     {
         if (null === $this->id) {
-            throw new Exception('PersistantMessage::$id has not been initialized');
+            throw new PersistentMessageWithoutIdentityException(get_class($this).'::$id has not been initialized');
         }
 
         return $this->id;
