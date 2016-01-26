@@ -9,7 +9,7 @@ use HMLB\DDD\Persistence\PersistentMessageCapabilities;
 /**
  * PersistentCommand
  *
- * @author Hugues Maignol <hugues.maignol@kitpages.fr>
+ * @author Hugues Maignol <hugues@hmlb.fr>
  */
 class PersistentCommand extends Command implements PersistentMessage
 {

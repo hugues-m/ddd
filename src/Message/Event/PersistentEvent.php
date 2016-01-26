@@ -9,7 +9,7 @@ use HMLB\DDD\Persistence\PersistentMessageCapabilities;
 /**
  * PersistentEvent
  *
- * @author Hugues Maignol <hugues.maignol@kitpages.fr>
+ * @author Hugues Maignol <hugues@hmlb.fr>
  */
 class PersistentEvent extends Event implements PersistentMessage
 {
