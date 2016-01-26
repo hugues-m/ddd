@@ -4,7 +4,6 @@ declare(strict_types = 1);
 namespace HMLB\DDD\Persistence;
 
 use HMLB\DDD\Entity\Identity;
-use HMLB\DDD\Exception\Exception;
 use HMLB\DDD\Exception\PersistentMessageWithoutIdentityException;
 
 /**
@@ -21,7 +20,7 @@ trait PersistentMessageCapabilities
      *
      * @return Identity
      *
-     * @throws Exception
+     * @throws PersistentMessageWithoutIdentityException
      */
     public function getId(): Identity
     {
