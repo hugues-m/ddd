@@ -22,9 +22,9 @@ class Message implements MessageInterface
     private $id;
 
     /**
-     * @var string
+     * @var string[]
      */
-    private static $_messageName;
+    private static $hmlbDDDMessageNamesCache = [];
 
     /**
      * @return string
@@ -51,11 +51,15 @@ class Message implements MessageInterface
      */
     public static function messageName(): string
     {
-        if (null === self::$_messageName) {
-            $classSlices = explode('\\', get_called_class());
-            self::$_messageName = strtolower(preg_replace('/([^A-Z])([A-Z])/', '$1_$2', array_pop($classSlices)));
+        if (array_key_exists($class = static::class, self::$hmlbDDDMessageNamesCache)) {
+            return self::$hmlbDDDMessageNamesCache[$class];
         }
 
-        return self::$_messageName;
+        $slices = explode('\\', get_called_class());
+        $name = strtolower(preg_replace('/([^A-Z])([A-Z])/', '$1_$2', end($slices)));
+
+        self::$hmlbDDDMessageNamesCache[$class] = $name;
+
+        return $name;
     }
 }
