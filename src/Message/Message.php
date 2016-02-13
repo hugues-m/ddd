@@ -1,5 +1,6 @@
 <?php
-declare(strict_types = 1);
+
+declare (strict_types = 1);
 
 namespace HMLB\DDD\Message;
 
@@ -55,11 +56,18 @@ class Message implements MessageInterface
             return self::$hmlbDDDMessageNamesCache[$class];
         }
 
-        $slices = explode('\\', get_called_class());
-        $name = strtolower(preg_replace('/([^A-Z])([A-Z])/', '$1_$2', end($slices)));
-
-        self::$hmlbDDDMessageNamesCache[$class] = $name;
+        self::$hmlbDDDMessageNamesCache[$class] = $name = static::generateMessageNameFromClassName();
 
         return $name;
+    }
+
+    /**
+     * @return string
+     */
+    protected static function generateMessageNameFromClassName(): string
+    {
+        $slices = explode('\\', get_called_class());
+
+        return strtolower(preg_replace('/([^A-Z])([A-Z])/', '$1_$2', end($slices)));
     }
 }
