@@ -7,7 +7,7 @@ use HMLB\DDD\Tests\Message\SomethingImportantHappened;
 use PHPUnit_Framework_TestCase;
 
 /**
- * MessageTest
+ * MessageTest.
  *
  * @author Hugues Maignol <hugues@hmlb.fr>
  */
@@ -21,5 +21,4 @@ class MessageTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('do_something_important', DoSomethingImportant::messageName());
         $this->assertEquals('something_important_happened', SomethingImportantHappened::messageName());
     }
-
 }

@@ -1,14 +1,14 @@
 <?php
-declare(strict_types = 1);
+
+declare (strict_types = 1);
 
 namespace HMLB\DDD\Exception;
 
 /**
- * PersistentMessageWithoutIdentityException
+ * PersistentMessageWithoutIdentityException.
  *
  * @author Hugues Maignol <hugues@hmlb.fr>
  */
 class PersistentMessageWithoutIdentityException extends Exception
 {
-
 }
