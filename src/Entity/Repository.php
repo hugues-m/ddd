@@ -28,12 +28,12 @@ interface Repository
      *
      * @throws AggregateRootNotFoundException
      */
-    public function get(Identity $identity): AggregateRoot;
+    public function get(Identity $identity);
 
     /**
      * @return AggregateRoot[]
      */
-    public function getAll(): array;
+    public function getAll();
 
     /**
      * The fully qualified class name of the managed AggregateRoot.
