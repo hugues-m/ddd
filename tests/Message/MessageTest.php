@@ -1,9 +1,8 @@
 <?php
+declare (strict_types = 1);
 
-namespace tests\Message;
+namespace HMLB\DDD\Tests\Message;
 
-use HMLB\DDD\Tests\Message\DoSomethingImportant;
-use HMLB\DDD\Tests\Message\SomethingImportantHappened;
 use PHPUnit_Framework_TestCase;
 
 /**
