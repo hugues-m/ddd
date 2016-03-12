@@ -6,7 +6,8 @@
 
 Library to ease DDD architecture with command bus pattern implementation in PHP projects.
 
-This is a work in progress, BC breaks could happen without notice.
+This library is used in production but is under heavy development and is not yet clearly documented. 
+BC breaks could happen without notice.
 
 ## License
 
