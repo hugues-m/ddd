@@ -35,13 +35,13 @@ class Identity
     }
 
     /**
-     * Uses UUID4 for ID generation.
+     * @param Identity $identity
      *
-     * @return string
+     * @return bool
      */
-    private function generateId(): string
+    public function equals(Identity $identity): bool
     {
-        return Uuid::uuid4()->toString();
+        return $this->id === (string) $identity;
     }
 
     /**
@@ -50,5 +50,15 @@ class Identity
     public function __toString(): string
     {
         return $this->id;
+    }
+
+    /**
+     * Uses UUID4 for ID generation.
+     *
+     * @return string
+     */
+    private function generateId(): string
+    {
+        return Uuid::uuid4()->toString();
     }
 }
